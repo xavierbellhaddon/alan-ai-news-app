@@ -8,16 +8,17 @@ import {
   Button,
   Typography,
 } from "@material-ui/core";
-import useStyles from "./styles.js"
+import classNames from "classnames";
+import useStyles from "./styles.js";
 
 const NewsCard = ({
   article: { description, title, publishedAt, source, url, urlToImage },
-  i,
+  i, activeArticle
 }) => {
     const classes = useStyles();
   return (
     <div>
-      <Card className={classes.card}>
+      <Card className={classNames(classes.card, activeArticle === i ? classes.activeCard : null)}>
         <CardActionArea href={url} target="_blank">
           <CardMedia
              className={classes.media}
@@ -38,7 +39,7 @@ const NewsCard = ({
               component="h2"
             >{source.name}</Typography>
           </div>
-          <Typography gutterBottom varian="h5" className={classes.title}>{title}</Typography>
+          <Typography gutterBottom variant="h5" className={classes.title}>{title}</Typography>
           <CardContent>
             <Typography
               variant="body2"
