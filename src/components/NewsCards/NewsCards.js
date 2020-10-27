@@ -16,7 +16,7 @@ const infoCards = [
     color: "#4527a0",
     title: "News by Terms",
     info: "Bitcoin, PlayStation 5, Smartphones, Donald Trump...",
-    text: "What's up with PlayStation 5",
+    text: "Give me the news on PlayStation 5",
   },
   {
     color: "#283593",
